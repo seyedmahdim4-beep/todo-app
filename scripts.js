@@ -140,7 +140,7 @@ function makeTodoElement(todoArray) {
     //Add Attributes
     card.setAttribute("draggable", true);
     cbInput.setAttribute("type", "checkbox");
-    img.setAttribute("src", "./assets/images/icon-cross.svg");
+    img.setAttribute("src", "/assets/images/icon-cross.svg");
     img.setAttribute("alt", "Clear It");
     item.textContent = todoObject.item;
 
