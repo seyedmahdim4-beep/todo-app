@@ -13,9 +13,9 @@ function main() {
     const themeImg = themeSwitcherBtn.children[0];
     themeImg.setAttribute(
       "src",
-      themeImg.getAttribute("src") === "./assets/images/icon-sun.svg" ?
-        "./assets/images/icon-moon.svg" :
-        "./assets/images/icon-sun.svg"
+      themeImg.getAttribute("src") === "/assets/images/icon-sun.svg" ?
+        "/assets/images/icon-moon.svg" :
+        "/assets/images/icon-sun.svg"
     );
   });
 
