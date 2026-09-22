@@ -1,9 +1,12 @@
+
 :root {
   --ff-sans: "Josefin Sans", sans-serif;
   --base-font: 1.6rem;
   --fw-normal: 400;
   --fw-bold: 700;
+
   --img-bg: url("assets/images/bg-desktop-dark.jpg");
+
   --clr-primary: hsl(0, 0%, 98%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-page-bg: hsl(235, 21%, 11%);
@@ -11,22 +14,26 @@
   --clr-blue: hsl(220, 98%, 61%);
   --clr-green: hsl(192, 100%, 67%);
   --clr-pink: hsl(280, 87%, 65%);
+
   --clr-gb-1: hsl(236, 33%, 92%);
   --clr-gb-2: hsl(234, 39%, 75%);
   --clr-gb-3: hsl(234, 11%, 52%);
   --clr-gb-4: hsl(237, 12%, 36%);
   --clr-gb-5: hsl(233, 14%, 35%);
   --clr-gb-6: hsl(235, 19%, 24%);
+
   --clr-box-shadow: hsl(0, 0%, 0%, 0.1);
 }
 
-/* CHANGE CUSTOM PROPERTIES WHEN LIGHT THEME */
+/* LIGHT THEME */
 
 body.light {
   --img-bg: url("assets/images/bg-desktop-light.jpg");
+
   --clr-primary: hsl(243, 12%, 30%);
   --clr-page-bg: hsl(0, 0%, 98%);
   --clr-card-bg: hsl(0, 0%, 100%);
+
   --clr-gb-1: hsl(240, 8%, 24%);
   --clr-gb-2: hsl(243, 12%, 30%);
   --clr-gb-3: hsl(252, 6%, 83%);
@@ -96,7 +103,7 @@ label {
   display: none;
 }
 
-/* ALL ARE CARDS  */
+/* CARDS */
 
 .card {
   background-color: var(--clr-card-bg);
@@ -107,7 +114,7 @@ label {
   gap: 2rem;
 }
 
-/* HEADER'S CARD */
+/* HEADER */
 
 header.card {
   background: transparent;
@@ -117,12 +124,11 @@ header.card {
 
 header.card h1 {
   color: var(--clr-white);
-
   font-weight: 700;
   font-size: calc(var(--base-font) * 2);
 }
 
-/* CHECKBOX CONTAINER AND FIELD */
+/* CHECKBOX */
 
 .card .cb-container {
   width: 2.5rem;
@@ -211,7 +217,7 @@ body.light .add .txt-container .txt-input {
   font-weight: var(--fw-normal);
 }
 
-/* TODOS CONTAINER */
+/* TODOS */
 
 .todos > * {
   transition: 0.4s ease;
@@ -342,18 +348,22 @@ footer {
   border-top: 0.2rem solid var(--clr-gb-6);
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 599px) {
   .stat {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 5rem 2rem;
   }
+
   .stat .filter {
-    grid-row: 2/3;
-    grid-column: 1/3;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
     justify-content: space-around;
     position: relative;
   }
+
   .stat .filter::before {
     content: "";
     position: absolute;
@@ -368,15 +378,17 @@ footer {
   header.card {
     align-items: center;
   }
+
   header.card h1 {
     font-size: calc(var(--base-font) * 1.5);
   }
 }
 
+/* DRAG AND DROP */
+
 .todos .card.dragging {
   opacity: 0.5;
 }
-
 
 .todos .card.fall {
   pointer-events: none;
@@ -388,12 +400,15 @@ footer {
     opacity: 0.5;
     transform: translateX(20%);
   }
+
   50% {
     transform: translateX(25%) rotateZ(40deg);
     opacity: 0.3;
   }
+
   100% {
     transform: translateX(30%) rotateZ(90deg);
     opacity: 0;
   }
 }
+
